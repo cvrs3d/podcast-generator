@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "-"
+description: "-"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding: 
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email: 
+    description: Commiters email
+    required: true
+    default: ${{ github.actor }}@localhost
+  name: 
+    description: Commiters name
+    required: true
+    default: ${{ github.actor }} 
